@@ -1,0 +1,11 @@
+{
+  "name": "trigger-cicleci-workflow",
+  "version": "1.0.0",
+  "description": "Trigger Circle CI Workflow Builds",
+  "main": "index.js",
+  "repository": "https://github.com/chukaofili/triggert-circleci-workflow.git",
+  "author": "Chuka Ofili",
+  "license": "GPL-3.0",
+  "private": false,
+  "dependencies": {}
+}
