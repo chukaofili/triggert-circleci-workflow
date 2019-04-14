@@ -6,7 +6,7 @@
  * @param {Object} res Cloud Function response context.
  *                     More info: https://expressjs.com/en/api.html#res
  */
-exports.triggerCIWorkflow = (req, res) => {
+exports.triggerCIWorkflow = async (req, res) => {
   const { action, head: { ref: branch }, repository: { full_name } } = req.body;
   const vcs_type = 'github';
   const url = `https://circleci.com/api/v1.1/project/${vcs_type}/${full_name}/build?circle-token=${process.env.CIRCLE_TOKEN}`;
