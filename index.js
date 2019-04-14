@@ -25,6 +25,7 @@ exports.triggerCIWorkflow = async (req, res) => {
     const response = await fetch(url, options).then((result) => { return result.json(); });
     return res.status(200).json(response);
   } catch (error) {
+    console.log(error)
     return res.status(500).json(error);
   }
 };
