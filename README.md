@@ -4,8 +4,8 @@ Description: Google Cloud Function to triger automated build on the circle ci pl
 
 ## Deployment
 
-1. Get your CircleCI.com personal token. 
-2. Create `.env.yaml` in the proejct root. *(you can use the `.env.yaml.example` file included)*.
-3. Add `CIRCLE_TOKEN: [TOKEN-HERE]`.
-4. Deploy using `gcloud functions deploy triggerCIWorkflow --env-vars-file .env.yaml --runtime nodejs8 --trigger-http`.
-5. Add webhook to github.com webhooks using **url** returned from google cloud function.
+1. Get your CircleCI.com personal token
+2. Create `.env.yaml` in the proejct root. *(you can use the `.env.yaml.example` file included)*
+3. Add `CIRCLE_TOKEN: [TOKEN-HERE]`
+4. Deploy using `gcloud functions deploy triggerCIWorkflow --env-vars-file .env.yaml --runtime nodejs8 --trigger-http`
+5. Add webhook to github.com webhooks using **url** returned from google cloud function
