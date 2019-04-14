@@ -14,7 +14,8 @@ exports.triggerCIWorkflow = async (req, res) => {
     method: 'POST',
     uri: `https://circleci.com/api/v1.1/project/${vcs_type}/${full_name}/build?circle-token=${process.env.CIRCLE_TOKEN}`,
     headers: {
-      'content-type': 'application/json'
+      'content-type': 'application/json',
+      'accept': 'application/json'
     },
     body: { branch },
     json: true
