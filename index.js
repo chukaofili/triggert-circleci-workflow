@@ -27,7 +27,11 @@ exports.triggerCIWorkflow = async (req, res) => {
 
   try {
     if (action === 'closed') {
-      const namespace = `${name.toLowerCase().split("-")[1]}-svc-pr-${number}`;
+      const svc = name.toLowerCase().split("-")[1];
+      let namespace = `${svc}-svc-pr-${number}`;
+      if(svc === 'marketplace') {
+        namespace = `${svc}-pr-${number}`;
+      }
       const result = await deleteNamespace(namespace);
       return res.status(200).json({ status: 200, body: result });
     }
